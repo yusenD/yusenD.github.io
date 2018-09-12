@@ -1,3 +1,16 @@
+
+baseurl: ""
+url: "https://yusenD.github.io"
+
+theme_settings:
+    title: Dong's Blog                 # Name of website
+    avatar: assets/img/triangular.svg     # Path of avatar image, to be displayed in the theme's header
+    gravatar: f6885199C679611E26684AC6F7C4AA6F6                # MD5 hash of your email address
+    description: My blog posts   
+    header_text: Welcome to Dong's blog
+    header_text_feature_image: assets/img/sample3.png
+    footer_text: Copyright 2017         # Short description, primarily used by search engines
+
 language: ruby
 rvm:
 - 2.3.3
