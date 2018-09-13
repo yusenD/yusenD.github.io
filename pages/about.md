@@ -1,20 +1,14 @@
 ---
 layout: page
-title: About
+title: 顾城的诗
 permalink: /about/
 feature-img: "assets/img/pexels/circuit.jpeg"
-tags: [About, Archive]
 ---
 
 <center>
 
-一切都明明白白
-
-但我们仍匆匆错过
-
-因为你相信命运
-
-因为我怀疑生活。
-
+<p>一切都明明白白</p>
+<p>但我们仍匆匆错过</p>
+<p>因为你相信命运</p>
+<p>因为我怀疑生活</p>
 </center>
- 
