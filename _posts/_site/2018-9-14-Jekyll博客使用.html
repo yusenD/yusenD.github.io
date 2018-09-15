@@ -1,0 +1,63 @@
+<p>我用的是Type on Strap 主题，其他的应该也差不多，有对应的js文件就行了。</p>
+
+<h2 id="博客使用">博客使用</h2>
+
+<ul id="markdown-toc">
+  <li><a href="#博客使用" id="markdown-toc-博客使用">博客使用</a>    <ul>
+      <li><a href="#1语法" id="markdown-toc-1语法">1.语法：</a>        <ul>
+          <li><a href="#js高亮" id="markdown-toc-js高亮">js高亮</a></li>
+          <li><a href="#katex数学公式" id="markdown-toc-katex数学公式">KaTeX数学公式</a></li>
+        </ul>
+      </li>
+      <li><a href="#2ymal常用" id="markdown-toc-2ymal常用">2.ymal常用</a></li>
+      <li><a href="#3其他一些" id="markdown-toc-3其他一些">3.其他一些</a>        <ul>
+          <li><a href="#目录" id="markdown-toc-目录">目录</a></li>
+          <li><a href="#注意" id="markdown-toc-注意">注意</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="1语法">1.语法：</h3>
+<hr />
+<h4 id="js高亮">js高亮</h4>
+
+<figure class="highlight"><pre><code class="language-js" data-lang="js">    <span class="c1">// count to ten</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;=</span> <span class="mi">10</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">i</span><span class="p">);</span>
+    <span class="p">}</span>
+    
+    <span class="c1">// count to twenty</span>
+    <span class="kd">var</span> <span class="nx">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">while</span> <span class="p">(</span><span class="nx">j</span> <span class="o">&lt;</span> <span class="mi">20</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">j</span><span class="o">++</span><span class="p">;</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">j</span><span class="p">);</span>
+    <span class="p">}</span>
+    </code></pre></figure>
+
+<h4 id="katex数学公式">KaTeX数学公式</h4>
+
+<p>用“$$”包起来起来就行了，比如：</p>
+
+<script type="math/tex; mode=display">S_n = a \times \frac{1-r^n}{1-r}</script>
+
+<script type="math/tex; mode=display">f(x) = \int \frac{2x^2+4x+6}{x-2}</script>
+
+<h3 id="2ymal常用">2.ymal常用</h3>
+<hr />
+<p><code class="highlighter-rouge">feature-img</code> 点进去博客之后，标题的背景图
+<code class="highlighter-rouge">thumbnail</code> 博客列表的缩略图
+<code class="highlighter-rouge">Tag</code> 标签</p>
+
+<h3 id="3其他一些">3.其他一些</h3>
+<hr />
+<h4 id="目录">目录</h4>
+<p>在你想要展示目录的位置输入下面内容，就有目录了，就像最上面一样</p>
+
+<blockquote>
+  <p>* TOC</p>
+</blockquote>
+
+<h4 id="注意">注意</h4>
+<p>在写markdown的小标题的时候，#符号后面还是应该一有个空格，不然这个识别不了</p>
