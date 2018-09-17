@@ -6,6 +6,10 @@ thumbnail: "assets/img/thumbnails/pexels-photo1.jpeg"
 tags: [Android,fragment]
 ---
 
+
+主要是再看一下Fragment的生命周期
+<br>
+
 Fragment依赖Activity，下面将Fragment的生命周期和Activity联合起来看。
 
 <br>
@@ -124,5 +128,26 @@ Fragment2: [onResume] END
 可以看到，只调用了`onDestoryView`，并没有调用`onDestory`和`onDetach`。
 
 
+**下面再看一下FragmentTransaction的方法会影响Fragment的生命周期**
+
+
+add() | onAttach()=> .... => onResume()
+remove() | onPause() => .... => onDetach()
+replace() | 相当于旧的Fragment调用remove()，新的Fragment调用add()
+show() | 不调用任何生命周期方法，调用该方法的前提是要显示的Fragment已经被添加到容器，只是单纯的把UI的可见属性设置为true
+hide() | 同上，单纯的把UI可见属性设置成false
+detach() | onPause() => onStop() => onDestoryView() 将UI从布局中移除掉，但是仍然在FragmentManager的管理之下。
+attach() | onCreateView() => onStart() => onResume()
+
+<br>
+<br>
+<br>
+<center> 
+Fragment的生命周期基本都了解了，明天看看具体的应用
+</center>
+
+
+<br>
+> 参考公众号文章：腾讯Bugly
 
 
