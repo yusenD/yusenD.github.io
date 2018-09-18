@@ -3,10 +3,10 @@ layout: post
 title: Fragment详解（一）
 feature-img: "assets/img/background/qingdao-street.jpg"     
 thumbnail: "assets/img/thumbnails/desk-messy.jpeg"
-tags: [Android,fragment]
+tags: [Android,Fragment]
 ---
 
-fragment是开发中非常常用的控件，最近开发用了不少fragment，搜集资料花了不少功夫，稍微总结一下
+Fragment是开发中非常常用的控件，最近开发用了不少Fragment，搜集资料花了不少功夫，稍微总结一下
 
 
 * TOC
