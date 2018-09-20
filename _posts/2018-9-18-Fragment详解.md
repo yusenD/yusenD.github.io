@@ -201,7 +201,11 @@ getFragmentSupportManager().popBackStack(F2.class.getSimpleName(),FragmentManage
 {% endhighlight %}
 
 这样就完成了整个页面的跳转逻辑。
+<br>
 
+
+<br>
+> 参考公众号文章：腾讯Bugly
 
 
 
