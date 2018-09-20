@@ -70,6 +70,31 @@ public class F1 extends Fragment {
 
 
 ## Activity向Fragment传递数据
+----
+
+可以在Fragment里面设置set方法，直接在Activity里调用。
+
+或者是用Bundle传参数：
+
+{% highlight java%}
+public static Fragment newFragment(Bundle bundle){
+    Fragment fragment = new Fragment();
+    fragment.setArguments(bundle);
+    return fragment;
+}
+{% endhighlight %}
+<br>
+
+
+## Fragment之间互相传数据
+----
+由于Fragment之间没有任何依赖关系，所以如果要进行相互通信，最好使用Activity作为中介，不要直接通信。
+
+
+<br><br>
+
+> 参考公众号文章：腾讯Bugly
+
 
 
 
