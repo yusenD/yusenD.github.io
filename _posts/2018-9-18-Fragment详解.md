@@ -6,9 +6,15 @@ thumbnail: "assets/img/thumbnails/pexels-photo2.jpeg"
 tags: [Android,Fragment]
 ---
 
+> *凛冽而热血*
+
 
 Activity有任务栈，用户通过`startActivity`来将Activity入栈，点击返回按钮将Activity出栈。Fragment也有类似的栈，称为Back Stack（回退栈）。
+
+
 <br><br>
+
+
 ## 通过Fragment源码看原理
 ----
 Back Stack由FragmentManager管理，在默认的情况下，Fragment事务不会加入回退栈，如果想将Fragment事务加入回退栈，可以用`addToBackStack("")`。如果没有加入回退栈的话，用户点击返回按钮会直接将Activity出栈；而如果加入了回退栈，用户点击返回按钮会回滚Fragment事务。
