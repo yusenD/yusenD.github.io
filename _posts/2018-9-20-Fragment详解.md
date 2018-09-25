@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Fragment详解（四）
-feature-img: "assets/img/background/pexels-photo1.jpeg"
-thumbnail: "assets/img/thumbnails/pexels-photo3.jpeg"
+feature-img: "assets/img/background/pexels-photo2.jpeg"     
+thumbnail: "assets/img/thumbnails/pexels-thumbnail2.jpeg"
 tags: [Android,Fragment]
 ---
 
