@@ -3,7 +3,14 @@
 <plist version="1.0">
 <dict>
 	<key>96B91B2983234C881C0C26FF919A9B0A</key>
-	<array/>
+	<array>
+		<dict>
+			<key>localURL</key>
+			<string>media/15390776718631.jpg</string>
+			<key>remoteURL</key>
+			<string>https://i.loli.net/2018/10/09/5bbca53c9e145.jpg</string>
+		</dict>
+	</array>
 	<key>selectedItem</key>
 	<string>96B91B2983234C881C0C26FF919A9B0A</string>
 </dict>
