@@ -2,7 +2,6 @@
 layout: post
 title: Fragment详解（五）
 feature-img: "assets/img/background/pexels-photo3.jpeg"     
-thumbnail: "assets/img/thumbnails/pexels-thumbnail3.jpeg"
 tags: [Android,Fragment]
 ---
 
