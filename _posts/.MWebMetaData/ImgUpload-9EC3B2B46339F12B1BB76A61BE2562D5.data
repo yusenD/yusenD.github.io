@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>96B91B2983234C881C0C26FF919A9B0A</key>
+	<array>
+		<dict>
+			<key>localURL</key>
+			<string>media/15526131895337.jpg</string>
+			<key>remoteURL</key>
+			<string>https://i.loli.net/2019/03/16/5c8c97d9518dd.jpg</string>
+		</dict>
+		<dict>
+			<key>localURL</key>
+			<string>media/15526433651475.jpg</string>
+			<key>remoteURL</key>
+			<string>https://i.loli.net/2019/03/16/5c8c97d94b178.jpg</string>
+		</dict>
+		<dict>
+			<key>localURL</key>
+			<string>media/15527173241372.jpg</string>
+			<key>remoteURL</key>
+			<string>https://i.loli.net/2019/03/16/5c8c97d972662.jpg</string>
+		</dict>
+		<dict>
+			<key>localURL</key>
+			<string>media/15525711596376.jpg</string>
+			<key>remoteURL</key>
+			<string>https://i.loli.net/2019/03/16/5c8c97d93c78f.jpg</string>
+		</dict>
+		<dict>
+			<key>localURL</key>
+			<string>media/15525709428017.jpg</string>
+			<key>remoteURL</key>
+			<string>https://i.loli.net/2019/03/16/5c8c97d93a8f4.jpg</string>
+		</dict>
+		<dict>
+			<key>localURL</key>
+			<string>media/15525731728125.jpg</string>
+			<key>remoteURL</key>
+			<string>https://i.loli.net/2019/03/16/5c8c97d928e95.jpg</string>
+		</dict>
+	</array>
+	<key>selectedItem</key>
+	<string>96B91B2983234C881C0C26FF919A9B0A</string>
+</dict>
+</plist>
