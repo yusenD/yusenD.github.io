@@ -113,53 +113,229 @@ Stream<dynamic> receiveBroadcastStream([dynamic arguments]) {
 {% endhighlight %}
  
 
-### 与ReactNative对比
-
-### Dart异步
-
 ### 一点测试
 
-测试机型：华为 SCL-CL00 Android 5.1.1 （性能很低端的手机）
+测试机型：华为 SCL-CL00 Android 5.1.1 （性能低端手机）
 
-使用MethodChannel。
+#### MethodChannel List<String>传输速度测试
 
-#### List<String>传输速度测试
+* 数据：4566*1500个汉字
+* 耗时：平均3.242s
 
-数据：7000*1000个汉字
-耗时：平均3.15s左右
-
-![](https://i.loli.net/2019/03/16/5c8c97d93c78f.jpg)
+{% highlight java%}
 
 
+    I/flutter (14132): 3.277
+    I/flutter (14132): success
+    I/flutter (14132): 3.185
+    I/flutter (14132): success
+    I/flutter (14132): 3.264
+    I/flutter (14132): success
+    I/flutter (14132): 3.231
+    I/flutter (14132): success
+    I/flutter (14132): 3.253
+    I/flutter (14132): success
 
-#### Map<int,String>传输速度测试
 
-数据：7000*1000字符长度
-耗时：平均3.4s左右
+{% endhighlight %}
+
+
+#### MethodChannel Map<int,String>传输速度测试
+
+* 数据：4566*1500个汉字
+* 耗时：平均3.4s左右(理所当然的慢)
 
 ![](https://i.loli.net/2019/03/16/5c8c97d93a8f4.jpg)
 
+#### BasicMessageChannel BinaryCodec测试
+
+* 数据：4566*1000个汉字
+* 平均时间：2.241s
+
+{% highlight java%}
+
+    I/flutter (26424): 2.288s
+    I/flutter (26424): 2.181
+    I/flutter (26424): 2.253s
+
+{% endhighlight %}
 
 
-#### JSON数据 HashMap
+* 数据：4566*1500个汉字
+* 平均时间：3.18s
 
-{
-      "message": "登录成功",
-      "success": true,
-      "data": {
-        "id": "2c9a821c67722c8f01678bce27090064",
-        "nickName": "123",
-        "portrait": "http://ecommunity.oss-cn-zhangjiakou.aliyuncs.com/1544523304800.jpg",
-        "phone": "15662383508",
-        "reviewStatus": false,
-        "houseResult": null,
-        "communityResult": null,
-        "tags": [
-          "0"
-        ],
-        "token": "536D901709D28C29652D0100A6D97635",
-        "marketSkillCertification": false
-      }
-}
+{% highlight java%}
 
-![](https://i.loli.net/2019/03/16/5c8c97d928e95.jpg)
+    I/flutter (12698): 3.164
+    I/flutter (12698): 3.188
+    I/flutter (12698): 3.193
+    I/flutter (12698): 3.146
+    I/flutter (12698): 3.22
+
+{% endhighlight %}
+
+
+* 数据：4566*2000个汉字
+* 平均时间:4.188s
+
+
+{% highlight java%}
+
+    I/flutter (25770): 4.252s
+    I/flutter (25770): 4.125s
+    I/flutter (25770): 4.179s
+
+{% endhighlight %}
+
+
+#### BasicMessageChannel StandardMessageCodec测试
+
+* 数据：4566*1000个汉字
+* 平均时间：2.152
+{% highlight java%}
+
+    I/flutter (15318): 1000
+    I/flutter (15318): 传送时间为：
+    I/flutter (15318): 0.022
+    I/flutter (15318): 总时间为：
+    I/flutter (15318): 2.297
+    I/flutter (15318): 1000
+    I/flutter (15318): 传送时间为：
+    I/flutter (15318): 0.012
+    I/flutter (15318): 总时间为：
+    I/flutter (15318): 2.105
+    I/flutter (15318): 1000
+    I/flutter (15318): 传送时间为：
+    I/flutter (15318): 0.012
+    I/flutter (15318): 总时间为：
+    I/flutter (15318): 2.073
+
+{% endhighlight %}
+
+
+
+* 数据：4566*1500个汉字
+* 平均时间：3.163s
+
+{% highlight java%}
+
+
+    I/flutter (15318): 1500
+    I/flutter (15318): 传送时间为：
+    I/flutter (15318): 0.019
+    I/flutter (15318): 总时间为：
+    I/flutter (15318): 3.163
+    I/flutter (15318): 1500
+    I/flutter (15318): 传送时间为：
+    I/flutter (15318): 0.015
+    I/flutter (15318): 总时间为：
+    I/flutter (15318): 3.168
+    I/flutter (15318): 1500
+    I/flutter (15318): 传送时间为：
+    I/flutter (15318): 0.013
+    I/flutter (15318): 总时间为：
+    I/flutter (15318): 3.159
+
+{% endhighlight %}
+
+* 数据：4566*2000个汉字
+* 平均时间：4.104s
+    
+{% highlight java%}
+
+    I/flutter (15318): 2000
+    I/flutter (15318): 传送时间为：
+    I/flutter (15318): 0.016
+    I/flutter (15318): 总时间为：
+    I/flutter (15318): 4.086
+    I/flutter (15318): 2000
+    I/flutter (15318): 传送时间为：
+    I/flutter (15318): 0.019
+    I/flutter (15318): 总时间为：
+    I/flutter (15318): 4.138
+    I/flutter (15318): 2000
+    I/flutter (15318): 传送时间为：
+    I/flutter (15318): 0.016
+    I/flutter (15318): 总时间为：
+    I/flutter (15318): 4.088
+
+{% endhighlight %}
+
+
+
+
+
+#### BasicMessageChannel 两种解码器 内存使用对比
+
+数据：数据：4566*2500个汉字
+
+* BinnaryCodec:
+
+![](https://i.loli.net/2019/03/16/5c8cf11055334.jpg)
+
+
+* StandardMessageCodec:
+
+
+![](https://i.loli.net/2019/03/16/5c8cf110538da.jpg)
+
+
+
+#### Native和Flutter编解码时间测试
+
+* 数据：4566*1000汉字
+
+* Native平均编码时间：1.195s
+* Native平均解码时间：1.383s
+* 合计：2.578s
+
+* Flutter平均编码时间：0.832s
+* Flutter平均解码时间：2.419
+* 合计：3.521s
+
+{% highlight java%}
+
+    I/flutter ( 6371): Flutter编码时间
+    I/flutter ( 6371): 0.92s
+    I/flutter ( 6371): Flutter解码时间
+    I/flutter ( 6371): 2.533s
+    Native编码时间为1.389s
+    Native解码时间为1.488s
+
+    I/flutter ( 6371): Flutter编码时间
+    I/flutter ( 6371): 0.772s
+    I/flutter ( 6371): Flutter解码时间
+    I/flutter ( 6371): 2.289s
+    Native编码时间为1.13s
+    Native解码时间为1.246s
+
+    I/flutter ( 7856): Flutter编码时间
+    I/flutter ( 7856): 0.863s
+    I/flutter ( 7856): Flutter解码时间
+    I/flutter ( 7856): 2.581s
+    Native编码时间为1.178s
+    Native解码时间为1.547s
+
+    I/flutter ( 7856): Flutter编码时间
+    I/flutter ( 7856): 0.774
+    I/flutter ( 7856): Flutter解码时间
+    I/flutter ( 7856): 2.273
+    Native编码时间为1.086
+    Native解码时间为1.252
+
+{% endhighlight %}
+
+### 一点结论
+
+1. `BasicMessageChannel`与`BinaryCodec`结合更适合传递大数据块
+2. 传递大数据块用List封装的性能明显比Map要更好
+3. Flutter的解码速度很快，但是解码速度很慢，Native编码和解码速度较为平均，结合两者来看还是Native要快。
+
+
+
+
+
+
+
+
+
