@@ -328,8 +328,8 @@ Stream<dynamic> receiveBroadcastStream([dynamic arguments]) {
 ### 一点结论
 
 1. `BasicMessageChannel`与`BinaryCodec`结合更适合传递大数据块
-2. 传递大数据块用List封装的性能明显比Map要更好
-3. Flutter的解码速度很快，但是解码速度很慢，Native编码和解码速度较为平均，结合两者来看还是Native要快。
+2. 如果条件允许，尽量还是用byte数组吧，这样很大程度上减少编码和解码时间
+3. Flutter的解码速度很快，但是解码速度很慢，Native编码和解码速度较为平均，结合两者来看还是Native要快
 
 
 
