@@ -5,8 +5,8 @@ header-img: img/home-bg.jpg
 email: hityusen@gmail.com
 description: "自律给我自由"
 keyword: ""
-url: ""              # your host, for absolute URL
-#baseurl: ""         # for example, '/blog' if your blog hosted on 'host/blog'
+url: "https://yusend.github.io"              # your host, for absolute URL
+baseurl: ""         # for example, '/blog' if your blog hosted on 'host/blog'
 favicon: img/favicon.ico
 
 
