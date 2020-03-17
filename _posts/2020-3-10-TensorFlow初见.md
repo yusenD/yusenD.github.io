@@ -283,7 +283,7 @@ sess.close()
 
 这里是一些内置的优化器：
 
-![image-20200312111716192](/Users/yuhao/Library/Application Support/typora-user-images/image-20200312111716192.png)
+![image-20200312111716192](/Users/yuhao/Library/Application Support/typora-user-images/image-20200312111716192.png) 
 
  
 
