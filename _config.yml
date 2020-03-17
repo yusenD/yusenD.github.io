@@ -6,7 +6,7 @@ email: hityusen@gmail.com
 description: "自律给我自由"
 keyword: ""
 url: ""              # your host, for absolute URL
-baseurl: "/blog"         # for example, '/blog' if your blog hosted on 'host/blog'
+#baseurl: ""         # for example, '/blog' if your blog hosted on 'host/blog'
 favicon: img/favicon.ico
 
 
